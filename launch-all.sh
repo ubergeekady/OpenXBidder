@@ -1,0 +1,11 @@
+python server-main.py -port=8888 -name=Tornado1 -refreshCache=5000&
+python server-main.py -port=8889 -name=Tornado2 -refreshCache=5000&
+python server-main.py -port=8890 -name=Tornado3 -refreshCache=5000&
+python server-main.py -port=8891 -name=Tornado4 -refreshCache=5000&
+python server-main.py -port=8892 -name=Tornado5 -refreshCache=5000&
+python server-main.py -port=8893 -name=Tornado6 -refreshCache=5000&
+python server-main.py -port=8894 -name=Tornado7 -refreshCache=5000&
+python server-main.py -port=8895 -name=Tornado8 -refreshCache=5000&
+python server-main.py -port=8896 -name=Tornado9 -refreshCache=5000&
+python server-main.py -port=8897 -name=Tornado10 -refreshCache=5000&
+python server-main.py -port=8898 -name=Tornado11 -refreshCache=5000&
