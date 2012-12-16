@@ -111,12 +111,6 @@ class MainHandler(tornado.web.RequestHandler):
         if bid == False :
             bidMicros = 0
             code = ""
-        else:
-            bidMicros = bid['bid'] * 1000000
-            info = base64.b64encode(json.dumps({'e':'OPENX','d':domain,'bid':bid['bannerId'],'cid':bid['campaignId'],
-            'geoState':bidRequest.user_geo_state}))
-            info = info.replace("+","-").replace("/","_").replace("=","")
-            code='<iframe src="http://rtbidder.impulse01.com/serve?info='+info+'&p={WINNING_PRICE}&r={RANDOM}&red={CLICKURL}" width="'+str(bidRequest.ad_width)+'" height="'+str(bidRequest.ad_height)+'" frameborder=0 marginwidth=0 marginheight=0 scrolling=NO></iframe>'    
         
         response = ssrtb_pb2.BidResponse()
         response.api_version = bidRequest.api_version
