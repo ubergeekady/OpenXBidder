@@ -113,6 +113,9 @@ class MainHandler(tornado.web.RequestHandler):
         if bid == False :
             bidMicros = 0
             code = ""
+            
+        print bidMicros
+        print code
         
         response = ssrtb_pb2.BidResponse()
         response.api_version = bidRequest.api_version
