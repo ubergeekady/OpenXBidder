@@ -37,7 +37,8 @@ class MainHandler(tornado.web.RequestHandler):
         start = time.time()
         postContent = self.request.body
         bidRequest = ssrtb_pb2.BidRequest()
-        
+
+        bid = True
         try:
             bidRequest.ParseFromString(postContent)
             ad = bidRequest.matching_ad_ids
