@@ -238,5 +238,4 @@ if __name__ == "__main__":
     tornado.options.parse_command_line()
     application.listen(options.port)
     tornado.ioloop.PeriodicCallback(refreshCache, options.refreshCache).start()
-    tornado.ioloop.PeriodicCallback(refreshRules, options.refreshCache).start()
     tornado.ioloop.IOLoop.instance().start()     
