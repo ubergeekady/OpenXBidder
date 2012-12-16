@@ -185,8 +185,6 @@ def refreshRules():
 
 
 
-
-
 #----------------------Initialize the Tornado Server --------------------------------
 define("port", default=8888, help="run on the given port", type=int)
 define("name", default="noname", help="name of the server")
@@ -196,18 +194,6 @@ define("rulesRefresh", default=10000, help="millisecond interval between rules r
 #redisClient.connect()
 application = tornado.web.Application([(r".*", MainHandler),])
 #-----------------------------------------------------------------------------------------------
-
-
-
-#---------------------Load Geo Index------------------------------------------------
-geoIndex=dict()
-location = open("location.csv","r").read()
-reader = csv.reader(location.split('\n'), delimiter=',')
-for row in reader:
-    geoIndex[row[0]]={"Name":row[1], "Parent":row[3], "Type":row[5],"Country":row[4]}
-print options.name+" Loaded geoIndex from location.csv"
-#-----------------------------------------------------------------------------------------------
-
 
 
 #---------------------Construct Campaign Index------------------------------------------------
