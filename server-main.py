@@ -33,8 +33,6 @@ UDP_PORT = 5006
 class MainHandler(tornado.web.RequestHandler):
     def post(self):
 	global campaignData
-	global india_tz
-	global india_time
 	global bidCountIndex      
         start = time.time()
         postContent = self.request.body
@@ -240,8 +238,6 @@ print "created index on SQLite table rules"
 #-----------------------------------------------------------------------------------------------
 
 bidCountIndex = autovivify(6, int)
-india_tz = timezone('Asia/Kolkata')
-india_time = datetime.datetime.now(india_tz)
 
 if __name__ == "__main__":
     tornado.options.parse_command_line()
