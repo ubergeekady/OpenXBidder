@@ -116,6 +116,7 @@ class MainHandler(tornado.web.RequestHandler):
             
         print bidMicros
         print code
+        print domain
         
         response = ssrtb_pb2.BidResponse()
         response.api_version = bidRequest.api_version
