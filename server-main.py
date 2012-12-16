@@ -87,7 +87,7 @@ class MainHandler(tornado.web.RequestHandler):
 	      camplist.sort(key=operator.itemgetter(1), reverse=True) # sorts the list in place decending by bids
 	      
 	      finalCampaign=0
-	      for camp in newCampList:
+	      for camp in camplist:
 		  r=random.randrange(1,100)
 		  if r<camp[2]:
 		      finalCampaign=camp[0]
